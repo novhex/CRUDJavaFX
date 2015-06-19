@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="basePane" onMouseClicked="#reDisableDelBtn" prefHeight="485.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demofx.MainFXMLController">
+   <children>
+      <TableView fx:id="tableProducts" layoutX="16.0" layoutY="14.0" onMouseClicked="#tableClickEvent" prefHeight="296.0" prefWidth="653.0">
+        <columns>
+          <TableColumn fx:id="tblCol_ID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tblCol_DESC" prefWidth="194.0" text="Product Description" />
+            <TableColumn fx:id="tblCol_PRICE" minWidth="0.0" prefWidth="125.0" text="Price" />
+            <TableColumn fx:id="tblCol_QTY" minWidth="0.0" prefWidth="113.0" text="Quantity" />
+            <TableColumn fx:id="tblCol_SALES" prefWidth="143.0" text="Amount Payable" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="343.0" text="Product Description" />
+      <TextField fx:id="product_Desc" layoutX="132.0" layoutY="339.0" onMouseClicked="#reDisableDelBtn" prefHeight="29.0" prefWidth="217.0" />
+      <TextField fx:id="product_Price" layoutX="132.0" layoutY="372.0" onMouseClicked="#reDisableDelBtn" prefHeight="25.0" prefWidth="78.0" />
+      <TextField fx:id="product_Qty" layoutX="132.0" layoutY="407.0" onMouseClicked="#reDisableDelBtn" prefHeight="25.0" prefWidth="78.0" />
+      <Label layoutX="20.0" layoutY="376.0" text="Product Price" />
+      <Label layoutX="20.0" layoutY="411.0" text="Quantity" />
+      <Button fx:id="btnAdd" disable="true" layoutX="376.0" layoutY="440.0" mnemonicParsing="false" onAction="#addRecord" text="Insert Record" />
+      <Button fx:id="btnEdit" disable="true" layoutX="188.0" layoutY="440.0" mnemonicParsing="false" onAction="#enableSaveEditedButton" text="Edit" />
+      <Button fx:id="btnDel" disable="true" layoutX="233.0" layoutY="440.0" mnemonicParsing="false" onAction="#deleteRecord" text="Delete" />
+      <Button fx:id="btnSaveEdited" disable="true" layoutX="290.0" layoutY="440.0" mnemonicParsing="false" onAction="#saveEditedRecord" text="Save Edited" />
+      <Label layoutX="20.0" layoutY="316.0" prefHeight="17.0" prefWidth="105.0" text="Product ID:" />
+      <TextField fx:id="txtResID" editable="false" layoutX="132.0" layoutY="312.0" onMouseClicked="#reDisableDelBtn" prefHeight="25.0" prefWidth="51.0" />
+      <Label layoutX="516.0" layoutY="316.0" prefHeight="17.0" prefWidth="154.0" text="Total sales for all products" />
+      <TextField fx:id="totalSales" editable="false" layoutX="516.0" layoutY="339.0" onMouseClicked="#reDisableDelBtn" />
+      <Button fx:id="btnNew" layoutX="143.0" layoutY="440.0" mnemonicParsing="false" onAction="#newRecord" text="New" />
+      <Button fx:id="btnCancel" disable="true" layoutX="470.0" layoutY="440.0" mnemonicParsing="false" onAction="#cancelNewRecord" text="Cancel" />
+      <Button fx:id="btnPrint" layoutX="542.0" layoutY="381.0" mnemonicParsing="false" onAction="#printAllRecords" text="Print Business Report" />
+   </children>
+</AnchorPane>
